@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Index_Kalia.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
