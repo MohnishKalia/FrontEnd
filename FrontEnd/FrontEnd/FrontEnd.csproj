@@ -71,6 +71,7 @@
     <Content Include="Index_KaliaHH.html" />
     <Content Include="Index_KaliaLN.html" />
     <Content Include="Index_KaliaME.html" />
+    <Content Include="main.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
