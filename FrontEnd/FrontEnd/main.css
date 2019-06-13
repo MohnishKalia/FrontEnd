@@ -63,3 +63,11 @@
     .tooltip:hover .tooltiptext {
         visibility: visible;
     }
+
+.content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}

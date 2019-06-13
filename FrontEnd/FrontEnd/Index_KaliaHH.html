@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
     <title>Heroes for Healthcare</title>
 </head>
 
@@ -38,17 +39,20 @@
             </li>
         </ul>
     </div>
-    <button onclick="showHide()" class="navigationLink">Show Message</button>
+    <button onclick="showHide()"class="navigationLink">Show Message</button>
     <div id="message">
         <h3 class="minorHeading">Message from the President</h3>
         <div class="bodyText">
             <p>
-                I started Heroes for Healthcare to help our U.S. military personnel receive the resources and credentials
+                I started Heroes for Healthcare to help our U.S. military personnel receive the resources and
+                credentials
                 they need to continue their career in healthcare as a civilian.
 
-                We need supporters like you to help our mission so our service members can get a job and better their lives.
+                We need supporters like you to help our mission so our service members can get a job and better their
+                lives.
 
-                After all they did for us, supporting this organization seems like the right thing to do. Make a difference
+                After all they did for us, supporting this organization seems like the right thing to do. Make a
+                difference
                 today by supporting Heroes for Healthcare.
             </p>
 
@@ -58,6 +62,23 @@
 </body>
 
 </html>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
 <script>
     function showHide() {
         var x = document.getElementById("message");

@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
+
     <title>Life Navigators</title>
 </head>
 
-<body onload="showHide()">
+<body onclick="showHide()">
     <h1 class="majorHeading">Life Navigators</h1>
     <h3 class="minorHeading">Mission</h3>
     <p class="bodyText">
@@ -35,10 +37,12 @@
             </p>
             <ul>
                 <li>1949: Concerned families founded the organization.</li>
-                <li>1950's: Initiated first day school for school–aged children with severe developmental disabilities.</li>
+                <li>1950's: Initiated first day school for school–aged children with severe developmental disabilities.
+                </li>
                 <li>1960's: Concerned families founded the organization.</li>
                 <li>
-                    1970's: Concerned families founded the organization. Became the first Corporate Guardianship provider in
+                    1970's: Concerned families founded the organization. Became the first Corporate Guardianship
+                    provider in
                     Milwaukee County to be licensed by the State of Wisconsin.
                 </li>
                 <li>
@@ -68,6 +72,23 @@
 </body>
 
 </html>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
 <script>
     function showHide() {
         var x = document.getElementById("history");

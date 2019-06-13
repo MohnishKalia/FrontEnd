@@ -5,11 +5,13 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="main.css" />
     <title>Media</title>
+    <script src="main.js"></script>
 </head>
 
 <body>
     <h1 class="majorHeading">Media</h1>
-    <div class="bodyText">
+    <button class="navigationLink collapsible">Show Images</button>
+    <div class="bodyText content">
         <img src="images/Code Review.jpg">
         <img src="images/Definition of done.jpg">
         <img src="images/Hallway.jpg">
@@ -21,9 +23,26 @@
         <img src="images/To do list.jpg">
         <img src="images/Update.jpg">
         <img src="images/Work Time.jpg">
-        <br />
-        <a href="Index_Kalia.html" class="navigationLink">Home</a>
     </div>
+    <a href="Index_Kalia.html" class="navigationLink">Home</a>
+
 </body>
 
 </html>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
