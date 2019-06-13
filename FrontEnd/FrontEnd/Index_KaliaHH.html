@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
     <title>Heroes for Healthcare</title>
 </head>
 
-<body>
+<body onload="showHide()">
     <img src="images/Heroes Logo.png" />
     <h1 class="majorHeading">Heroes for Healthcare</h1>
     <img src="images/Heroes2.png" />
@@ -25,26 +26,65 @@
         </p>
         <ul>
             <li>
-                453,000 unemployed veterans in 2016
+                <div class="tooltip">
+                    453,000
+                    <div class="tooltiptext">Unemployed veterans in 2016</div>
+                </div>
             </li>
             <li>
-                Post-Sept. 11 veterans tend to be unemployed at higher rates than other veterans
+                <div class="tooltip">
+                    Post-Sept. 11 veterans
+                    <div class="tooltiptext">Tend to be unemployed at higher rates than other veterans</div>
+                </div>
             </li>
         </ul>
     </div>
-    <h3 class="minorHeading">Message from the President</h3>
-    <div class="bodyText">
-        <p>
-            I started Heroes for Healthcare to help our U.S. military personnel receive the resources and credentials
-            they need to continue their career in healthcare as a civilian.
+    <button onclick="showHide()"class="navigationLink">Show Message</button>
+    <div id="message">
+        <h3 class="minorHeading">Message from the President</h3>
+        <div class="bodyText">
+            <p>
+                I started Heroes for Healthcare to help our U.S. military personnel receive the resources and
+                credentials
+                they need to continue their career in healthcare as a civilian.
 
-            We need supporters like you to help our mission so our service members can get a job and better their lives.
+                We need supporters like you to help our mission so our service members can get a job and better their
+                lives.
 
-            After all they did for us, supporting this organization seems like the right thing to do. Make a difference
-            today by supporting Heroes for Healthcare.
-        </p>
-        <a href="Index_Kalia.html" class="navigationLink">Home</a>
+                After all they did for us, supporting this organization seems like the right thing to do. Make a
+                difference
+                today by supporting Heroes for Healthcare.
+            </p>
+
+        </div>
     </div>
+    <a href="Index_Kalia.html" class="navigationLink">Home</a>
 </body>
 
 </html>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
+<script>
+    function showHide() {
+        var x = document.getElementById("message");
+        if (x.style.display !== "none")
+            x.style.display = "none";
+        else
+            x.style.display = "block";
+    }
+</script>
