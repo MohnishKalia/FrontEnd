@@ -3,81 +3,108 @@
 
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Heroes for Healthcare</title>
 </head>
 
 <body onload="showHide()">
-    <img src="images/Heroes Logo.png" />
-    <h1 class="majorHeading">Heroes for Healthcare</h1>
-    <img src="images/Heroes2.png" />
-    <h3 class="minorHeading">Mission</h3>
-    <p class="bodyText">
-        Our non-profit organization is a resource for our military personnel to start a career in healthcare.
-    </p>
-    <img src="images/Heroes3.png" align="right" width="25%" />
-    <h3 class="minorHeading">Unemployed Veterans</h3>
-    <div class="bodyText">
-        <p>
-            Many U.S. Veterans find it hard to secure a job in healthcare when they’re ready to work in the civilian
-            world. Even after showing dedication, strong work ethic, and leadership while serving our country, many
-            military members can’t find jobs.
-        </p>
-        <ul>
-            <li>
-                <div class="tooltip">
-                    453,000
-                    <div class="tooltiptext">Unemployed veterans in 2016</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="images/Heroes Logo.png" />
+            </div>
+            <div class="col-sm-10">
+                <p class="majorHeading">Heroes for Healthcare</h1>
+            </div>
+        </div>
+        <div class="row bodyText">
+            <div class="col-sm-3" align="center">
+                <a href="Index_Kalia.html" class="navigationLink">Code the Way</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaLN.html" class="navigationLink">Life Navigators</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaHH.html" class="navigationLink">Heroes for Healthcare</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaME.html" class="navigationLink">Media</a>
+            </div>
+        </div>
+        <!-- Actual webpage -->
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3 class="minorHeading">Mission</h3>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="bodyText">
+                            Our non-profit organization is a resource for our military personnel to start a career in
+                            healthcare.
+                        </p>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <div class="tooltip">
-                    Post-Sept. 11 veterans
-                    <div class="tooltiptext">Tend to be unemployed at higher rates than other veterans</div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3 class="minorHeading">Unemployed Veterans</h3>
+                    </div>
+                    <div class="col-sm-9 bodyText">
+                        <p>
+                            Many U.S. Veterans find it hard to secure a job in healthcare when they’re ready to work in
+                            the civilian
+                            world. Even after showing dedication, strong work ethic, and leadership while serving our
+                            country, many
+                            military members can’t find jobs.
+                        </p>
+                        <ul>
+                            <li data-toggle="tooltip" data-placement="left" title="Unemployed veterans in 2016">
+                                453,000
+                            </li>
+                            <li data-toggle="tooltip" data-placement="left"
+                                title="Tend to be unemployed at higher rates than other veterans">
+                                Post-Sept. 11 veterans
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </li>
-        </ul>
-    </div>
-    <button onclick="showHide()" class="navigationLink">Show Message</button>
-    <div id="message">
-        <h3 class="minorHeading">Message from the President</h3>
-        <div class="bodyText">
-            <p>
-                I started Heroes for Healthcare to help our U.S. military personnel receive the resources and
-                credentials
-                they need to continue their career in healthcare as a civilian.
+            </div>
+            <div class="col-sm-5">
+                <img src="images/Heroes2.png" />
+            </div>
+        </div>
+        <div class="row">
+            <button onclick="showHide()" class="navigationLink">Show Message</button>
+        </div>
+        <div class="row" id="message">
+            <div class="col-sm-3">
+                <h3 class="minorHeading">Message from the President</h3>
 
-                We need supporters like you to help our mission so our service members can get a job and better their
-                lives.
+            </div>
+            <div class="col-sm-9 bodyText">
+                <p>
+                    I started Heroes for Healthcare to help our U.S. military personnel receive the resources and
+                    credentials
+                    they need to continue their career in healthcare as a civilian.
 
-                After all they did for us, supporting this organization seems like the right thing to do. Make a
-                difference
-                today by supporting Heroes for Healthcare.
-            </p>
+                    We need supporters like you to help our mission so our service members can get a job and better
+                    their
+                    lives.
 
+                    After all they did for us, supporting this organization seems like the right thing to do. Make a
+                    difference
+                    today by supporting Heroes for Healthcare.
+                </p>
+            </div>
         </div>
     </div>
-    <a href="Index_Kalia.html" class="navigationLink">Home</a>
+    <!-- <img src="images/Heroes3.png" align="right" width="25%" /> -->
 </body>
 
 </html>
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-
-</script>
 <script>
     function showHide() {
         var x = document.getElementById("message");
@@ -86,4 +113,7 @@
         else
             x.style.display = "block";
     }
+    $(document).ready(() => {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
