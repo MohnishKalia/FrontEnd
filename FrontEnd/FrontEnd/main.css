@@ -3,6 +3,7 @@
     font-weight: bold;
     color: black;
     font-size: xx-large;
+    text-align: center;
 }
 
 .minorHeading {
@@ -19,7 +20,7 @@
     font-size: medium;
 }
 
-.buttonFormatting {
+.navigationLink {
     background-color: #557A95;
     border: 2px solid #557A95;
     color: white;
@@ -34,7 +35,7 @@
     transition-duration: 0.4s;
 }
 
-    .buttonFormatting:hover {
-        background-color: white;
-        color: #557A95;
-    }
+.navigationLink:hover {
+    background-color: white;
+    color: #557A95;
+}
