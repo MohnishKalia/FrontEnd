@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css" />
-    <script src="main.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Code the Way</title>
 </head>
 
@@ -23,36 +24,21 @@
         </p>
         <p>Code the Way model includes:</p>
         <ul>
-            <li>
-                <div class="tooltip">
-                    Student access to real-world job experience
-                    <div class="tooltiptext">
-                        In addition to an advanced course that may earn
+            <li data-toggle="tooltip" data-placement="bottom" title="In addition to an advanced course that may earn
                         post-secondary credits, students get experience working collaboratively on a project that
                         benefits a
-                        nonprofit, culminating in a presentation to business leaders.
-                    </div>
-                </div>
+                        nonprofit, culminating in a presentation to business leaders.">
+                Student access to real-world job experience
             </li>
-            <li>
-                <div class="tooltip">
-                    Companies are part of the solution
-                    <div class="tooltiptext">
-                        Companies invest in education, make technology more accessible to
+            <li data-toggle="tooltip" data-placement="bottom" title="Companies invest in education, make technology more accessible to
                         nonprofits, offer their employees a meaningful volunteer experience, and contribute to the
                         talent
-                        pipeline.
-                    </div>
-                </div>
+                        pipeline.">
+                Companies are part of the solution
             </li>
-            <li>
-                <div class="tooltip">
-                    Increasing certified computer science teachers
-                    <div class="tooltiptext">
-                        Support and training for computer science teacher
-                        certification increases the availability and quality of high school computer science programs.
-                    </div>
-                </div>
+            <li data-toggle="tooltip" data-placement="bottom" title="Support and training for computer science teacher
+                        certification increases the availability and quality of high school computer science programs.">
+                Increasing certified computer science teachers
             </li>
         </ul>
         <img src="images/Code Review.jpg" align="right" />
@@ -84,5 +70,8 @@
         else
             x.style.display = "block";
     }
+    $(document).ready(() => {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
-  
+
