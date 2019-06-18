@@ -4,74 +4,97 @@
 
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css" />
-    <script src="main.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Code the Way</title>
 </head>
 
 <body onload="showHide()">
-    <img src="images/CodeTheWay logo.png" />
-    <h1 class="majorHeading">Code the Way</h1>
-    <h3 class="minorHeading">Mission</h3>
-    <div class="bodyText">
-        <p>
-            Code the Way facilitates the collaboration of schools, companies, and nonprofits to: (1) Offer students
-            advanced computer science training and real-world job experiences working on projects that benefit
-            nonprofits; (2) Increase certified computer science teachers; and (3) Contribute to the technology talent
-            base.
-        </p>
-        <p>Code the Way model includes:</p>
-        <ul>
-            <li>
-                <div class="tooltip">
-                    Student access to real-world job experience
-                    <div class="tooltiptext">
-                        In addition to an advanced course that may earn
-                        post-secondary credits, students get experience working collaboratively on a project that
-                        benefits a
-                        nonprofit, culminating in a presentation to business leaders.
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="tooltip">
-                    Companies are part of the solution
-                    <div class="tooltiptext">
-                        Companies invest in education, make technology more accessible to
-                        nonprofits, offer their employees a meaningful volunteer experience, and contribute to the
-                        talent
-                        pipeline.
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="tooltip">
-                    Increasing certified computer science teachers
-                    <div class="tooltiptext">
-                        Support and training for computer science teacher
-                        certification increases the availability and quality of high school computer science programs.
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <img src="images/Code Review.jpg" align="right" />
-    </div>
-    <button onclick="showHide()" class="navigationLink">Show Vision</button>
-    <div id="vision">
-        <h3 class="minorHeading">Vision</h3>
-        <div class="bodyText">
-            <p>
-                High school students in Greater Milwaukee have access to high quality computer science education and
-                real-world job experiences, positioning them for success in technology-related fields
-            </p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="images/CodeTheWay logo.png" />
+            </div>
+            <div class="col-sm-10">
+                <p class="majorHeading">Code the Way</p>
+            </div>
         </div>
-    </div>
-    <h3 class="minorHeading">Links</h3>
-    <div class="bodyText">
-        <a href="Index_KaliaLN.html" class="navigationLink">Life Navigators</a>
-        <a href="Index_KaliaHH.html" class="navigationLink">Heroes for Healthcare</a>
-        <a href="Index_KaliaME.html" class="navigationLink">Media</a>
+        <div class="row bodyText">
+            <div class="col-sm-3" align="center">
+                <a href="Index_Kalia.html" class="navigationLink">Code the Way</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaLN.html" class="navigationLink">Life Navigators</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaHH.html" class="navigationLink">Heroes for Healthcare</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaME.html" class="navigationLink">Media</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row bodyText">
+                    <div class="col-sm-3">
+                        <h3 class="minorHeading">Mission</h3>
+                    </div>
+                    <div class="col-sm-9">
+                        <p>
+                            Code the Way facilitates the collaboration of schools, companies, and nonprofits to: (1)
+                            Offer students
+                            advanced computer science training and real-world job experiences working on projects that
+                            benefit
+                            nonprofits; (2) Increase certified computer science teachers; and (3) Contribute to the
+                            technology
+                            talent
+                            base.
+                        </p>
+                        <p>Code the Way model includes:</p>
+                        <ul>
+                            <li data-toggle="tooltip" data-placement="left" title="In addition to an advanced course that may earn
+                                        post-secondary credits, students get experience working collaboratively on a project that
+                                        benefits a
+                                        nonprofit, culminating in a presentation to business leaders.">
+                                Student access to real-world job experience
+                            </li>
+                            <li data-toggle="tooltip" data-placement="left" title="Companies invest in education, make technology more accessible to
+                                        nonprofits, offer their employees a meaningful volunteer experience, and contribute to the
+                                        talent
+                                        pipeline.">
+                                Companies are part of the solution
+                            </li>
+                            <li data-toggle="tooltip" data-placement="left"
+                                title="Support and training for computer science teacher
+                                        certification increases the availability and quality of high school computer science programs.">
+                                Increasing certified computer science teachers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <button onclick="showHide()" class="navigationLink">Show Vision</button>
+                    <div class="row bodyText" id="vision">
+                        <div class="col-sm-3">
+                            <h3 class="minorHeading">Vision</h3>
+                        </div>
+                        <div class="col-sm-9">
+                            <p>
+                                High school students in Greater Milwaukee have access to high quality computer
+                                science education and
+                                real-world job experiences, positioning them for success in technology-related
+                                fields
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="images/Code Review.jpg" />
+            </div>
+        </div>
     </div>
 </body>
 
@@ -84,5 +107,7 @@
         else
             x.style.display = "block";
     }
+    $(document).ready(() => {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
-  

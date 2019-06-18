@@ -3,33 +3,151 @@
 
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Media</title>
-    <script src="main.js"></script>
 </head>
 
-<body>
-    <h1 class="majorHeading">Media</h1>
-    <button class="navigationLink collapsible">Show Images</button>
-    <div class="bodyText content">
-        <img src="images/Code Review.jpg">
-        <img src="images/Definition of done.jpg">
-        <img src="images/Hallway.jpg">
-        <img src="images/Project Management.jpg">
-        <img src="images/Sprint review-code demo.jpg">
-        <img src="images/Stand Up.jpg">
-        <img src="images/Team Learning.jpg">
-        <img src="images/Team Programming.jpg">
-        <img src="images/To do list.jpg">
-        <img src="images/Update.jpg">
-        <img src="images/Work Time.jpg">
-    </div>
-    <a href="Index_Kalia.html" class="navigationLink">Home</a>
+<body onload="showHide()">
+    <div class="container-fluid">
+        <div class="row">
+            <p class="majorHeading">Media</p>
+        </div>
+        <div class="row bodyText">
+            <div class="col-sm-3" align="center">
+                <a href="Index_Kalia.html" class="navigationLink">Code the Way</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaLN.html" class="navigationLink">Life Navigators</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaHH.html" class="navigationLink">Heroes for Healthcare</a>
+            </div>
+            <div class="col-sm-3" align="center">
+                <a href="Index_KaliaME.html" class="navigationLink">Media</a>
+            </div>
+        </div>
+        <!-- Actual webpage -->
+        <div class="row">
+            <button onclick="showHide()" class="navigationLink">Show Images</button>
+        </div>
 
+        <div class="bodyText" id="imgs">
+            <!-- pics -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/Code Review.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Code Review</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/Definition of done.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Defintion of done</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/Hallway.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Hallway</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/Project Management.jpg">
+                    </div>
+                    <div class="row">
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/Sprint review-code demo.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Sprint review-code demo</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/Stand Up.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Stand Up</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/Team Learning.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Team Learning</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/Team Programming.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Team Programming</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <img src="images/To do list.jpg">
+                    </div>
+                    <div class="row">
+                        <p>To do list</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <img src="images/Update.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Update</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <img src="images/Work Time.jpg">
+                    </div>
+                    <div class="row">
+                        <p>Work Time</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end pics -->
+        </div>
+    </div>
 </body>
 
 </html>
 <script>
+    function showHide() {
+        var x = document.getElementById("imgs");
+        if (x.style.display !== "none")
+            x.style.display = "none";
+        else
+            x.style.display = "block";
+    }
+</script>
+<!-- <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -44,5 +162,4 @@
             }
         });
     }
-
-</script>
+</script> -->
